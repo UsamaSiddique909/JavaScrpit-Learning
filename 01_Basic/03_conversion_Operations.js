@@ -1,5 +1,5 @@
 
-let score = "hitesh"
+let score = "Usama"
 
 //console.log(typeof score);
 //console.log(typeof(score));
