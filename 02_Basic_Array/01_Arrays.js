@@ -6,6 +6,9 @@ const arr2 = [6,7,8,9,10]
 const newarr = arr+","+arr2;
 //const newarr = arr.join()
 //console.log(typeof newarr);
+const allarr = arr.concat(arr2)
+//console.log(allarr);
+
 
 
 // array
