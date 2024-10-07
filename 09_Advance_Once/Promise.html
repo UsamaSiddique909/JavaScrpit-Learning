@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body style="background-color: black, color(white)">
+    <button>Add</button>
+</body>
+</html>
+<script>
+const promiseOne = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        console.log("Promise synce")
+        resolve();
+    },1000)
+})
+promiseOne.then(function(){
+    console.log("Promise resolved")
+})
+
+const promiseTwo = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        console.log("Promise is synce two")
+        resolve();
+    },1000)
+}).then(function(){
+    console.log("Second promise resolved")
+    
+})
+
+promisethree = new Promise(function(resolve,reject){
+        resolve({username:"Usama",Password:123})
+}).then(function(user){
+    console.log(user)
+})
+
+promiseforth = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error = false;
+        if(!error){
+            resolve({username:"Usama Siddique",Password:123})
+        }else{
+            reject('Error: Something went wrong')
+        }
+    },1000)
+
+    }).then(function(user){
+        console.log(user)
+        return user.username;
+    }).catch(function(error){
+        console.log(error)
+    })
+
+const promisefive = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error = true;
+        if(!error){
+            console.log("Promise five")
+        }else{
+            reject('error: Something wrong with promise')
+        }
+    },1000)
+})
+async function promisefifth(){
+try{
+    const response = await promisefive
+    console.log(response)
+}catch(erro){
+    console.log(error)
+}
+}
+</script>
+
